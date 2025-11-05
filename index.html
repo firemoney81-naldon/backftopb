@@ -3,1372 +3,1083 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="bPeyJ_S-8nWUQOJ-jHeV7UVtUrtM_aln4fud6O-cZHc" />
+    
     <title>자동차 책임보험 한도, 충분한지 지금 확인하세요</title>
     <style>
-        /*
-        * 1. 전역 스타일 및 부드러운 색감 팔레트 정의
-        */
-        :root {
-            --color-primary-soft: #56A0FF; /* 부드러운 파랑 */
-            --color-secondary-soft: #FF70A6; /* 부드러운 분홍 */
-            --color-accent-green: #90E0EF; /* 부드러운 하늘색/민트 */
-            --color-accent-yellow: #FFB347; /* 부드러운 주황 */
-            --color-background-light: #F7F9FC; /* 아주 밝은 배경 */
-            --color-text-dark: #333333; /* 명확한 텍스트 색상 */
-            --color-text-link: #3B72FF; /* 링크 텍스트 색상 */
-            --color-card-background: #FFFFFF; /* 카드 배경은 흰색으로 가독성 확보 */
-        }
-
+        /* 기본 스타일 및 부드러운 색감 적용 */
         body {
-            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-            background-color: var(--color-background-light);
-            color: var(--color-text-dark);
-            line-height: 1.6;
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: #f0f4f8; /* 부드러운 배경색 */
+            color: #333; /* 텍스트 가독성 확보 */
+            line-height: 1.6;
         }
 
-        /*
-        * 2. 레이아웃 (Grid를 활용한 다채롭고 유연한 레이아웃)
-        */
         .container {
             width: 90%;
-            max-width: 1400px;
-            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
         }
 
+        /* 명확한 시각적 계층 구조 */
         header {
             text-align: center;
-            padding: 60px 20px 40px;
-            background: linear-gradient(135deg, var(--color-primary-soft) 0%, var(--color-accent-green) 100%);
-            width: 100%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            color: white;
+            padding: 30px 0;
+            border-bottom: 3px solid #007bff; /* 메인 강조색 */
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            color: #007bff;
+            font-size: 2.5em;
+            margin: 0;
             font-weight: 700;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
+        h2 {
+            color: #555;
+            font-size: 1.8em;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+            font-weight: 600;
         }
 
+        /* 링크 그리드 스타일 */
         .link-grid {
             display: grid;
-            /* 반응형: 최소 300px 크기의 컬럼을 유동적으로 배치 */
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
         }
 
-        /*
-        * 3. 명확한 시각적 계층 구조 및 카드 디자인
-        */
         .link-card {
-            background-color: var(--color-card-background);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-left: 5px solid; /* 다채로운 색감 적용을 위한 테두리 */
         }
 
         .link-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .link-card h2 {
-            font-size: 1.35rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: var(--color-text-dark);
-        }
-
-        .link-description {
-            display: block; /* 전체 문구가 링크가 되도록 블록 요소로 설정 */
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--color-text-link); /* 링크 문구는 명확한 파란색으로 처리 */
-            text-decoration: none; /* 밑줄 제거 */
-            transition: color 0.3s;
-            border-left: 4px solid var(--color-secondary-soft); /* 부드러운 색감으로 구분선 */
-            padding-left: 15px;
-        }
-
-        .link-description:hover {
-            color: var(--color-primary-soft);
-            text-decoration: underline;
-        }
+        /* 다채로운 색감: 섹션별 테두리 색상 */
+        .link-card.direct-links { border-left-color: #28a745; /* 녹색 */ }
+        .link-card.promotion-links { border-left-color: #ffc107; /* 노란색 */ }
+        .link-card.car-specific-links { border-left-color: #dc3545; /* 빨간색 */ }
         
-        /* 다채로운 색감을 위한 카드 테두리 색상 무작위 지정 (CSS 한계로 가상 요소를 이용) */
-        .link-card:nth-child(4n+1) { border-left: 6px solid var(--color-primary-soft); }
-        .link-card:nth-child(4n+2) { border-left: 6px solid var(--color-secondary-soft); }
-        .link-card:nth-child(4n+3) { border-left: 6px solid var(--color-accent-green); }
-        .link-card:nth-child(4n)   { border-left: 6px solid var(--color-accent-yellow); }
+        /* 텍스트 스타일 및 링크 강조 */
+        .link-card p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+        }
 
-        /*
-        * 4. 반응형 디자인 (모바일 최적화)
-        */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .subtitle {
-                font-size: 1rem;
-            }
-            .container {
-                padding: 20px 10px;
-            }
-            .link-card {
-                padding: 20px;
-            }
-            .link-card h2 {
-                font-size: 1.2rem;
-            }
+        .link-card a {
+            text-decoration: none;
+            color: inherit; /* 부모 요소의 텍스트 색상 상속 */
+            font-weight: 500;
+            display: block; /* 설명 문구 전체에 링크를 걸기 위함 */
+        }
+
+        .keyword {
+            font-weight: 700;
+            color: #007bff;
+            display: block; /* 키워드도 한 줄로 명확하게 */
+            font-size: 1.1em;
+            margin-bottom: 5px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<div class="container">
     <header>
-        <h1>[GPT] 자동차 책임보험 한도, 충분한지 지금 확인하세요</h1>
-        <p class="subtitle">엄선된 90개 보험 관련 링크와 독특한 설명 문구로 구성된 프리미엄 컬렉션</p>
+        <h1>자동차 책임보험 한도, 충분한지 지금 확인하세요</h1>
+        <p>요구에 맞는 최적의 보험, 지금 바로 시작하세요.</p>
     </header>
 
-    <div class="container">
+    <main>
         <div class="link-grid">
-            
-            <div class="link-card">
-                <h2>쏘렌토보험료</h2>
-                <a class="link-description" href="https://caropromotionx.withusdone.com/" target="_blank">
-                    시대를 대표하는 SUV, 쏘렌토의 가치를 완벽하게 지켜줄 단 하나의 합리적인 보험 설계 전략.
+            <div class="link-card direct-links">
+                <a href="https://directbpmoi.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험추천</span>
+                    <p>수많은 선택지 속, 나를 위한 최적의 **자동차보험추천**을 받는 곳. 망설임 없는 가이드!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료계산기</h2>
-                <a class="link-description" href="https://directupromotione.withusdone.com/" target="_blank">
-                    단 몇 번의 클릭으로 미래의 보험료를 미리 예측하는 마법. 당신의 예산을 철저히 보호하는 첫 걸음.
+            <div class="link-card direct-links">
+                <a href="https://directbpmou.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험비교사이트</span>
+                    <p>시간과 비용을 절약하는 현명한 선택, **다이렉트자동차보험비교사이트**에서 답을 찾다!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>만26세 자동차보험</h2>
-                <a class="link-description" href="http://bohumpromotionk.cafe24.com/" target="_blank">
-                    운전 경력의 새로운 전환점, 만 26세 운전자를 위한 폭넓은 보장과 최대 할인율의 만남.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionr.withusdone.com/" target="_blank">
+                    <span class="keyword">카마로보험료</span>
+                    <p>뜨거운 심장을 가진 **카마로보험료**. 질주 본능을 위한 합리적인 보험 설계!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적사이트</h2>
-                <a class="link-description" href="https://directapmoa.withusdone.com/" target="_blank">
-                    수많은 보험사들 사이에서 길을 잃지 마세요. 가장 빠르고 정확하게 최적의 견적을 찾아내는 비밀 지도.
+            <div class="link-card direct-links">
+                <a href="https://directcpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험계산</span>
+                    <p>복잡하게 느껴지던 보험료, 이제는 명쾌하게 **자동차보험계산**의 비밀을 풀 시간!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차책임보험</h2>
-                <a class="link-description" href="https://directxpromotionh.withusdone.com/" target="_blank">
-                    합리적인 중고차 구매를 위한 필수 안전장치. 책임 보험 하나로 법적 의무와 최소한의 안전을 동시에 확보.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차상해보험</span>
+                    <p>나와 가족을 위한 든든한 보호막, **자동차상해보험**으로 예기치 않은 순간에 대비하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험특약</h2>
-                <a class="link-description" href="https://directupromotionf.withusdone.com/" target="_blank">
-                    기본을 넘어선 당신만의 특별한 보장. 운전 습관과 라이프스타일에 맞춘 섬세한 보험 특약의 모든 것.
+            <div class="link-card direct-links">
+                <a href="https://directdpmou.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험저렴한곳</span>
+                    <p>가격과 보장, 두 마리 토끼를 잡는 마법의 장소. **자동차보험저렴한곳**을 지금 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험 할부</h2>
-                <a class="link-description" href="https://directcarpromotf.cafe24.com/" target="_blank">
-                    일시불의 부담을 덜어주는 현명한 선택. 보험료 분납을 통한 재정 유연성 확보 가이드.
+            <div class="link-card direct-links">
+                <a href="https://directipmoo.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험6개월</span>
+                    <p>단기 계획에도 완벽한 맞춤, **자동차보험6개월** 플랜으로 유연함을 더하다.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료조회</h2>
-                <a class="link-description" href="https://directbpmot.withusdone.com/" target="_blank">
-                    궁금증은 지금 바로 해결하세요. 내 차 보험료의 현재 가치를 실시간으로 투명하게 확인하는 창구.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotiong.withusdone.com/" target="_blank">
+                    <span class="keyword">제네시스보험료</span>
+                    <p>프리미엄 세단의 품격, **제네시스보험료**는 어떻게 책정될까요? 상세 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>카니발자동차보험</h2>
-                <a class="link-description" href="https://caropromotionv.withusdone.com/" target="_blank">
-                    패밀리카의 대명사, 카니발의 넉넉한 공간만큼이나 든든한 보장을 약속하는 맞춤형 보험 설계.
+            <div class="link-card direct-links">
+                <a href="https://directapmoo.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험비교견적</span>
+                    <p>숨겨진 비용 없이 투명하게, 단 한 번에 끝내는 **자동차보험비교견적**의 정석.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험추가</h2>
-                <a class="link-description" href="https://directepmoz.withusdone.com/" target="_blank">
-                    새로운 가족 또는 운전자를 위한 유연한 보장 확장. 언제든지 필요한 만큼 보장을 추가하는 방법.
+            <div class="link-card direct-links">
+                <a href="https://directjpmob.withusdone.com/" target="_blank">
+                    <span class="keyword">새차보험</span>
+                    <p>설레는 새 차의 첫 여정, 완벽한 보호를 위한 **새차보험** 가이드!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>K5보험료</h2>
-                <a class="link-description" href="https://directxpromotionk.withusdone.com/" target="_blank">
-                    스타일리시한 K5 운전자를 위한 최적의 비용 효율성. 디자인과 실용성을 겸비한 보험료 해법.
+            <div class="link-card direct-links">
+                <a href="https://directcpmoz.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차누구나보험</span>
+                    <p>누구나 운전할 수 있는 자유, **자동차누구나보험**으로 운전자의 폭을 넓히세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차보험가입</h2>
-                <a class="link-description" href="https://directfpmow.withusdone.com/" target="_blank">
-                    복잡한 절차는 이제 그만. 중고차를 인수하는 그 순간, 바로 시작하는 간편하고 확실한 보험 가입 절차.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotiont.withusdone.com/" target="_blank">
+                    <span class="keyword">벤츠자동차보험</span>
+                    <p>럭셔리의 대명사 벤츠, 그 품격에 맞는 **벤츠자동차보험** 프리미엄 솔루션!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차책임보험가격</h2>
-                <a class="link-description" href="https://directcarpromotv.cafe24.com/" target="_blank">
-                    법적 최소 보장의 기준, 책임보험. 가장 저렴한 가격으로 의무 사항을 충족하는 방법의 탐색.
+            <div class="link-card direct-links">
+                <a href="https://directepmow.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험명의변경</span>
+                    <p>복잡한 명의 변경 과정, **자동차보험명의변경**을 위한 명쾌한 절차 안내!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험변경</h2>
-                <a class="link-description" href="https://directcpmox.withusdone.com/" target="_blank">
-                    차량 교체, 운전자 범위 변경, 주소 이전. 삶의 변화에 맞춰 보험 설계를 유연하게 변경하는 지혜.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionl.withusdone.com/" target="_blank">
+                    <span class="keyword">제네시스G80보험료</span>
+                    <p>고급 세단 G80의 가치, 그에 합당한 **제네시스G80보험료**의 모든 것.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차책임보험만</h2>
-                <a class="link-description" href="https://directgpmog.withusdone.com/" target="_blank">
-                    최소한의 안전과 법규 준수를 위한 선택. 책임보험만 가입할 때의 장단점과 정확한 가입 정보.
+            <div class="link-card direct-links">
+                <a href="https://directdpmok.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험견적</span>
+                    <p>쉽고 빠르게 비교하고 바로 견적! **다이렉트자동차보험견적**으로 시간을 아끼세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>GV70보험료</h2>
-                <a class="link-description" href="https://carvpromotiond.withusdone.com/" target="_blank">
-                    도심 속 우아한 질주, GV70. 세련된 디자인만큼이나 특별한 프리미엄 SUV의 합리적인 보험 견적.
+            <div class="link-card car-specific-links">
+                <a href="https://caropromotionr.withusdone.com/" target="_blank">
+                    <span class="keyword">테슬라모델3보험료</span>
+                    <p>미래 모빌리티의 기준, **테슬라모델3보험료**의 특별한 산정 기준을 파헤치다!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적</h2>
-                <a class="link-description" href="https://directapmoc.withusdone.com/" target="_blank">
-                    시간을 절약하고 지갑을 지키는 가장 확실한 방법. 모든 보험사의 견적을 한 번에 비교 분석.
+            <div class="link-card direct-links">
+                <a href="https://directjpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">인터넷자동차보험료비교견적사이트</span>
+                    <p>집에서 편안하게 만나는 최저가! **인터넷자동차보험료비교견적사이트**의 혁명.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료 할부</h2>
-                <a class="link-description" href="https://directupromotiont.withusdone.com/" target="_blank">
-                    당장의 목돈 부담은 덜고, 마음 편히 보험을 유지하는 재정 계획. 유연한 할부 납부 시스템 안내.
+            <div class="link-card direct-links">
+                <a href="https://directnpmoi.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차다이렉트보험계산</span>
+                    <p>손쉽게 입력하고 바로 확인! **자동차다이렉트보험계산**으로 예산을 예측하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험명의이전보험</h2>
-                <a class="link-description" href="https://directepmoe.withusdone.com/" target="_blank">
-                    명의 변경 시 놓쳐서는 안 될 보험 승계 절차. 소유자가 바뀌어도 보장의 공백을 허용하지 않는 방법.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotionk.withusdone.com/" target="_blank">
+                    <span class="keyword">K5보험료</span>
+                    <p>스타일리시한 K5 운전자들을 위한, **K5보험료**의 합리적인 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험회사순위</h2>
-                <a class="link-description" href="https://directhpmoi.withusdone.com/" target="_blank">
-                    고객 만족도, 보상 서비스, 가격 경쟁력. 모든 면에서 인정받은 최고의 보험사 순위를 공개합니다.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotionf.withusdone.com/" target="_blank">
+                    <span class="keyword">중고차자동차보험</span>
+                    <p>가성비 넘치는 중고차, **중고차자동차보험**으로 새로운 시작을 안전하게!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>차량보험료</h2>
-                <a class="link-description" href="https://directupromotionl.withusdone.com/" target="_blank">
-                    내 차량의 종류와 연식에 따라 달라지는 숨겨진 보험료 비밀. 차량 보험료 책정 기준 상세 분석.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoq.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험싼곳</span>
+                    <p>가격은 낮추고 보장은 그대로! 믿을 수 있는 **자동차보험싼곳**을 발견하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>벤츠E클래스보험료</h2>
-                <a class="link-description" href="https://carmpromotione.withusdone.com/" target="_blank">
-                    독일 명차의 상징, 벤츠 E클래스. 그 위상에 걸맞은 수준 높은 보장과 합리적인 보험료의 균형점 찾기.
+            <div class="link-card direct-links">
+                <a href="https://directcpmof.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험할인할증등급</span>
+                    <p>나의 운전 습관이 결정하는 보험료! **자동차보험할인할증등급**을 개선하는 비결.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험비용</h2>
-                <a class="link-description" href="https://directipmow.withusdone.com/" target="_blank">
-                    보험 가입에 드는 모든 비용을 투명하게 해부합니다. 총 보험 비용을 최소화하는 전략적 접근.
+            <div class="link-card car-specific-links">
+                <a href="https://carmpromotionf.withusdone.com/" target="_blank">
+                    <span class="keyword">EV6보험료</span>
+                    <p>전기차의 새로운 기준, 역동적인 **EV6보험료** 견적을 바로 받아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료견적</h2>
-                <a class="link-description" href="https://directgpmoy.withusdone.com/" target="_blank">
-                    가장 빠르고 정확한 내 차 보험료 예상 금액 조회. 지금 바로 최신 견적을 받아보는 직통 경로.
+            <div class="link-card direct-links">
+                <a href="https://directapmob.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험비교</span>
+                    <p>단순 비교를 넘어선 맞춤 분석! 현명한 **자동차보험비교**의 출발점.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험비교</h2>
-                <a class="link-description" href="https://directapmob.withusdone.com/" target="_blank">
-                    단순 나열을 넘어선 심층 비교 분석. 나에게 가장 유리한 보험 상품을 선택하는 결정적 비교 포인트.
+            <div class="link-card direct-links">
+                <a href="https://directcpmos.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험료비교</span>
+                    <p>수수료 없이 저렴하게! **다이렉트자동차보험료비교**로 가계 경제를 지키세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교</h2>
-                <a class="link-description" href="https://directapmoq.withusdone.com/" target="_blank">
-                    보험료 절약의 시작은 비교로부터. 숨겨진 할인 요소를 찾아내어 보험료를 극적으로 낮추는 지름길.
+            <div class="link-card direct-links">
+                <a href="https://directapmod.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차다이렉트보험</span>
+                    <p>중간 단계 없이 직접 가입하는 스마트한 방식, **자동차다이렉트보험**의 모든 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>GV80보험료</h2>
-                <a class="link-description" href="https://carvpromotioni.withusdone.com/" target="_blank">
-                    플래그십 SUV, GV80의 웅장함을 뒷받침하는 완벽한 보장. 최상위 모델을 위한 프리미엄 보험료 설계.
+            <div class="link-card direct-links">
+                <a href="https://directlpmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험가입혜택</span>
+                    <p>놓치기 아까운 다양한 특약과 할인, **자동차보험가입혜택**을 꼼꼼하게 챙기세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>레이보험료</h2>
-                <a class="link-description" href="https://directxpromotionc.withusdone.com/" target="_blank">
-                    경차의 경제적 이점을 극대화하는 레이 맞춤형 보험료. 효율성과 실속을 모두 잡는 비결.
+            <div class="link-card direct-links">
+                <a href="https://directfpmow.withusdone.com/" target="_blank">
+                    <span class="keyword">중고차보험가입</span>
+                    <p>새로운 주인을 만난 중고차, 걱정 없는 운행을 위한 **중고차보험가입** 노하우!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험 신규</h2>
-                <a class="link-description" href="https://directcpmom.withusdone.com/" target="_blank">
-                    첫차 또는 첫 보험 가입자를 위한 완벽 가이드. 신규 가입 시 놓쳐서는 안 될 핵심 체크리스트.
+            <div class="link-card car-specific-links">
+                <a href="https://caropromotiont.withusdone.com/" target="_blank">
+                    <span class="keyword">팰리세이드보험</span>
+                    <p>패밀리 SUV의 듬직함, **팰리세이드보험**으로 온 가족의 안전을 책임지세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험요율</h2>
-                <a class="link-description" href="https://directgpmov.withusdone.com/" target="_blank">
-                    보험료를 결정하는 복잡한 수치, 요율. 할인/할증 등급을 이해하고 보험료를 예측하는 핵심 정보.
+            <div class="link-card direct-links">
+                <a href="https://directipmoz.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험사추천</span>
+                    <p>수많은 보험사 중 어떤 곳을 선택해야 할까요? 신뢰할 수 있는 **자동차보험사추천**!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>BMW보험료</h2>
-                <a class="link-description" href="https://directxpromotionz.withusdone.com/" target="_blank">
-                    운전의 즐거움, BMW. 고성능 럭셔리 차량의 가치에 걸맞은 보장과 현명한 보험료 납부 전략.
+            <div class="link-card direct-links">
+                <a href="https://directnpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험다이렉트차이</span>
+                    <p>다이렉트와 일반 보험, 무엇이 다를까요? **자동차보험다이렉트차이**를 명확하게 비교!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가격비교</h2>
-                <a class="link-description" href="http://directcarpromotl.cafe24.com/" target="_blank">
-                    최저가를 찾는 여정의 종착역. 국내 모든 보험사의 상품 가격을 실시간으로 비교 분석하는 플랫폼.
+            <div class="link-card direct-links">
+                <a href="https://directkpmof.withusdone.com/" target="_blank">
+                    <span class="keyword">자차가입</span>
+                    <p>내 차를 위한 필수 보장, **자차가입**으로 작은 사고에도 든든하게 대비하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험 만기</h2>
-                <a class="link-description" href="https://directupromotionq.withusdone.com/" target="_blank">
-                    갱신 시기를 놓치지 않도록 알려주는 알람 서비스. 보험 만기 전 반드시 확인해야 할 중요 사항.
+            <div class="link-card direct-links">
+                <a href="https://directbpmof.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험견적</span>
+                    <p>단 몇 분 만에 받아보는 맞춤 견적! **자동차보험견적**으로 시작하는 스마트한 보험 생활.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트차보험비교</h2>
-                <a class="link-description" href="https://directcpmon.withusdone.com/" target="_blank">
-                    대면 채널 대비 압도적인 가격 경쟁력. 다이렉트 보험사 간의 치열한 견적 비교를 통한 최저가 확보.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionb.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험비교견적</span>
+                    <p>가장 합리적인 선택을 위한 필수 과정, **자동차보험비교견적**을 지금 바로 시작하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료1년</h2>
-                <a class="link-description" href="http://bohumpromotionc.cafe24.com/" target="_blank">
-                    1년 단위로 계약되는 자동차 보험의 총 비용 분석. 연간 보험료를 절약하는 장기적인 전략 제시.
+            <div class="link-card direct-links">
+                <a href="https://directapmor.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료계산기</span>
+                    <p>복잡한 계산은 이제 그만! **자동차보험료계산기**로 정확하고 빠르게 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차보험료</h2>
-                <a class="link-description" href="https://directupromotionp.withusdone.com/" target="_blank">
-                    새 차와는 다른 중고차 특유의 보험료 책정 기준. 내 중고차에 가장 합리적인 보험료를 찾는 방법.
+            <div class="link-card direct-links">
+                <a href="https://directepmop.withusdone.com/" target="_blank">
+                    <span class="keyword">자차보험이란</span>
+                    <p>자차 보험이 무엇인지 궁금하다면? **자차보험이란** 명쾌한 정의와 보장 범위 해설!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>쏘나타보험료</h2>
-                <a class="link-description" href="http://carmpromotionv.withusdone.com/" target="_blank">
-                    대한민국의 대표 세단, 쏘나타. 오랜 시간 검증된 차량의 안정적인 보험료 구조를 확인하세요.
+            <div class="link-card direct-links">
+                <a href="https://directgpmon.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험환입</span>
+                    <p>보험료를 되돌려 받는 기회, **자동차보험환입** 제도의 이점을 놓치지 마세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험할증기준</h2>
-                <a class="link-description" href="https://directapmoi.withusdone.com/" target="_blank">
-                    사고 후 보험료가 오르는 기준을 명확히 알아야 합니다. 할증률이 적용되는 정확한 기준 안내.
+            <div class="link-card direct-links">
+                <a href="https://directjpmon.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험 26세</span>
+                    <p>만 26세 기준, 확 낮아지는 보험료의 비밀! **자동차보험 26세** 특약을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험견적비교사이트</h2>
-                <a class="link-description" href="https://directdpmoh.withusdone.com/" target="_blank">
-                    단 하나의 견적만으로는 부족합니다. 여러 보험사의 견적을 비교해 최고의 혜택을 찾아내는 곳.
+            <div class="link-card direct-links">
+                <a href="https://directgpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">중고차보험료</span>
+                    <p>새 차와는 다른 중고차의 보험료, **중고차보험료**의 합리적인 산출 기준을 알아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>렉서스보험료</h2>
-                <a class="link-description" href="https://carvpromotionm.withusdone.com/" target="_blank">
-                    정숙함과 내구성을 자랑하는 렉서스. 고장률 낮은 차량의 이점을 살려 보험료를 절감하는 핵심 비법.
+            <div class="link-card direct-links">
+                <a href="https://directapmol.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험조회</span>
+                    <p>내 보험 상태가 궁금할 때! **자동차보험조회**로 모든 정보를 한눈에!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험추천</h2>
-                <a class="link-description" href="http://bohumpromotiong.cafe24.com/" target="_blank">
-                    수많은 상품 중 나에게 꼭 맞는 베스트 셀러. 전문가가 추천하는 가장 든든한 자동차 보험 상품 리스트.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionk.withusdone.com/" target="_blank">
+                    <span class="keyword">포르쉐보험료</span>
+                    <p>궁극의 드라이빙 머신 포르쉐, **포르쉐보험료**의 특별함과 가치를 만나보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교</h2>
-                <a class="link-description" href="https://directupromotionu.withusdone.com/" target="_blank">
-                    숨겨진 보험료 차이를 찾아내어 당신의 돈을 지켜드립니다. 최적의 보험료를 위한 체계적인 비교 분석.
+            <div class="link-card car-specific-links">
+                <a href="https://caropromotionm.withusdone.com/" target="_blank">
+                    <span class="keyword">스포츠카보험료</span>
+                    <p>짜릿한 스포츠카 라이프, **스포츠카보험료**는 얼마일까요? 맞춤 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차자동차보험</h2>
-                <a class="link-description" href="https://directhpmol.withusdone.com/" target="_blank">
-                    중고차 구매 후 혼란을 겪지 않도록. 중고차를 위한 보험 가입 절차와 유의 사항 완벽 정리.
+            <div class="link-card direct-links">
+                <a href="https://directbpmod.withusdone.com/" target="_blank">
+                    <span class="keyword">20대자동차보험료</span>
+                    <p>20대를 위한 합리적인 보험료! **20대자동차보험료** 절약 팁을 공개합니다.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>내차가입한자동차보험조회</h2>
-                <a class="link-description" href="https://directcpmot.withusdone.com/" target="_blank">
-                    혹시 잊으셨나요? 내가 가입한 보험의 상세 내역과 만기일을 한 번에 조회하는 편리한 시스템.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotioni.withusdone.com/" target="_blank">
+                    <span class="keyword">GV80보험료</span>
+                    <p>제네시스 플래그십 SUV, 웅장한 **GV80보험료**의 상세 견적 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자차보험이란</h2>
-                <a class="link-description" href="https://directepmop.withusdone.com/" target="_blank">
-                    내 차를 위한 궁극의 방패, 자차보험. 정확한 정의와 보장 범위를 이해하고 제대로 가입하는 노하우.
+            <div class="link-card direct-links">
+                <a href="https://directipmoh.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료확인</span>
+                    <p>간편하게 내 보험료를 다시 한 번! **자동차보험료확인** 서비스로 재정비하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>QM6보험료</h2>
-                <a class="link-description" href="https://carmpromotionn.withusdone.com/" target="_blank">
-                    가성비 SUV의 대명사, QM6. 경제적인 차량 유지 비용에 걸맞은 합리적인 보험료 견적.
+            <div class="link-card direct-links">
+                <a href="https://directkpmow.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험상담</span>
+                    <p>혼자 고민하지 마세요! 전문가와 함께하는 **자동차보험상담**으로 해답을 찾으세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험자녀할인</h2>
-                <a class="link-description" href="https://directupromotionn.withusdone.com/" target="_blank">
-                    자녀가 있다면 놓치지 마세요. 육아 가정에 제공되는 특별한 보험료 할인 혜택 상세 안내.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionu.withusdone.com/" target="_blank">
+                    <span class="keyword">제네시스G70보험료</span>
+                    <p>운전의 즐거움 G70, **제네시스G70보험료**의 다이내믹한 견적을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험종류</h2>
-                <a class="link-description" href="https://directapmox.withusdone.com/" target="_blank">
-                    책임, 대인, 대물, 자차, 자손/자상... 복잡한 보험의 종류를 한눈에 파악하고 필요한 담보만 선택.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoo.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험자동차상해</span>
+                    <p>사고 발생 시 운전자까지 보호하는 특약, **자동차보험자동차상해**의 강력한 보장!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험다이렉트</h2>
-                <a class="link-description" href="https://directapmoe.withusdone.com/" target="_blank">
-                    중간 수수료를 없애고 가격을 혁신하다. 보험료 절감의 정석, 다이렉트 보험 가입의 모든 것.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차가족보험</span>
+                    <p>사랑하는 가족 모두를 아우르는 넉넉함, **자동차가족보험**으로 안심하고 운전하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자차보험료</h2>
-                <a class="link-description" href="https://directgpmou.withusdone.com/" target="_blank">
-                    가장 변동폭이 큰 담보, 자차보험. 내 차의 가치와 위험도를 정확히 반영한 보험료 산출의 비밀.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotiond.withusdone.com/" target="_blank">
+                    <span class="keyword">GV70보험료</span>
+                    <p>도시적인 감각의 GV70, **GV70보험료**의 세련된 견적을 바로 만나보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험견적</h2>
-                <a class="link-description" href="http://bohumpromotionf.cafe24.com/" target="_blank">
-                    정확한 예측은 성공적인 보험 가입의 필수 요소. 가장 신뢰할 수 있는 실시간 보험 견적 확인.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionm.withusdone.com/" target="_blank">
+                    <span class="keyword">BMW보험료</span>
+                    <p>독일 명차 BMW, 그에 걸맞은 **BMW보험료** 프리미엄 견적을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험할인할증등급</h2>
-                <a class="link-description" href="https://directcpmof.withusdone.com/" target="_blank">
-                    운전자의 운전 습관과 사고 이력을 반영하는 핵심 지표. 할인/할증 등급의 비밀과 관리 노하우.
+            <div class="link-card direct-links">
+                <a href="https://directapmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험다이렉트</span>
+                    <p>중개 수수료를 줄여 더 저렴하게! **자동차보험다이렉트**로 현명한 소비를 시작하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험순위</h2>
-                <a class="link-description" href="https://directdpmoi.withusdone.com/" target="_blank">
-                    고객들의 선택은 틀리지 않습니다. 가입자 수, 만족도, 보상 처리 속도를 기반으로 한 객관적인 순위 정보.
+            <div class="link-card direct-links">
+                <a href="https://directgpmof.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험자손</span>
+                    <p>자기신체사고 보장의 또 다른 이름, **자동차보험자손**의 핵심을 파악하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>20대자동차보험</h2>
-                <a class="link-description" href="https://directcarunmee.withusdone.com/" target="_blank">
-                    높은 보험료 때문에 고민하는 20대를 위한 특별한 해법. 가장 저렴하게 가입하는 방법의 집약.
+            <div class="link-card car-specific-links">
+                <a href="https://caropromotionv.withusdone.com/" target="_blank">
+                    <span class="keyword">카니발자동차보험</span>
+                    <p>대형 RV 카니발, 온 가족을 위한 **카니발자동차보험**의 안전한 설계!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>레이자동차보험료</h2>
-                <a class="link-description" href="https://carmpromotiono.withusdone.com/" target="_blank">
-                    박스카의 매력을 가진 레이. 독특한 구조와 낮은 사고율을 반영한 합리적인 자동차 보험료 탐구.
+            <div class="link-card direct-links">
+                <a href="https://directjpmoo.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험보장</span>
+                    <p>어떤 상황에서도 안심할 수 있는 **자동차보험보장**, 완벽한 담보 구성을 찾아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험료비교</h2>
-                <a class="link-description" href="https://directcpmos.withusdone.com/" target="_blank">
-                    다이렉트 채널의 장점을 극대화. 국내 최저가 보험료를 실시간으로 비교하고 바로 가입하는 플랫폼.
+            <div class="link-card direct-links">
+                <a href="https://directdpmot.withusdone.com/" target="_blank">
+                    <span class="keyword">차량보험조회</span>
+                    <p>현재 가입된 **차량보험조회**, 빠르고 간편하게 내 보험 이력을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가입</h2>
-                <a class="link-description" href="https://directbpmoq.withusdone.com/" target="_blank">
-                    보험 가입, 더 이상 어렵지 않습니다. 초보자도 쉽게 따라 할 수 있는 단계별 가입 절차 안내.
+            <div class="link-card direct-links">
+                <a href="https://directapmoa.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료비교견적사이트</span>
+                    <p>한 곳에서 모든 보험사의 견적을! **자동차보험료비교견적사이트**의 편리함을 경험하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험회사</h2>
-                <a class="link-description" href="https://directcpmoy.withusdone.com/" target="_blank">
-                    든든한 보상을 책임지는 파트너. 국내 주요 자동차 보험 회사의 특징과 장점을 한눈에 비교.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotionl.withusdone.com/" target="_blank">
+                    <span class="keyword">콜로라도보험료</span>
+                    <p>강인한 픽업트럭 콜로라도, **콜로라도보험료**의 특별한 견적을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험다이렉트견적</h2>
-                <a class="link-description" href="https://directepmod.withusdone.com/" target="_blank">
-                    대리점 방문 없이 온라인으로 1분 만에 완성. 혁신적으로 저렴한 다이렉트 견적을 지금 경험하세요.
+            <div class="link-card direct-links">
+                <a href="https://directjpmof.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험담보</span>
+                    <p>필수부터 선택까지, 나에게 꼭 맞는 **자동차보험담보** 구성을 위한 완벽 가이드.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>BMW5시리즈보험료</h2>
-                <a class="link-description" href="http://caropromotiong.withusdone.com/" target="_blank">
-                    비즈니스 세단의 정석, BMW 5시리즈. 고가 수리비에 대비하는 튼튼한 보장 설계와 보험료 해법.
+            <div class="link-card direct-links">
+                <a href="https://directcpmoc.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료인상</span>
+                    <p>보험료가 오르는 이유와 대처법! **자동차보험료인상** 요인을 분석하고 대비하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험비교견적사이트</h2>
-                <a class="link-description" href="https://directapmon.withusdone.com/" target="_blank">
-                    가장 많은 소비자가 선택한 다이렉트 비교 견적의 성지. 최저가 보장을 위한 필수 방문 코스.
+            <div class="link-card direct-links">
+                <a href="https://directipmok.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험중복가입</span>
+                    <p>혹시 중복 가입은 아닐까요? **자동차보험중복가입**의 위험성과 확인 방법!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험경력인정</h2>
-                <a class="link-description" href="https://directbpmoo.withusdone.com/" target="_blank">
-                    군 운전 경력, 해외 운전 경력, 가족 보험 경력. 숨겨진 경력을 찾아내 보험료를 할인받는 방법.
+            <div class="link-card direct-links">
+                <a href="https://directjpmol.withusdone.com/" target="_blank">
+                    <span class="keyword">탄만큼내는자동차보험</span>
+                    <p>운행 거리에 따라 보험료가 달라진다! 합리적인 **탄만큼내는자동차보험**!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>K8 하이브리드 보험료</h2>
-                <a class="link-description" href="https://carvpromotiona.withusdone.com/" target="_blank">
-                    고급스러움과 연비를 겸비한 K8 하이브리드. 친환경 차량의 특성을 반영한 특별한 보험료 산출.
+            <div class="link-card direct-links">
+                <a href="https://directcpmog.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험갱신기간</span>
+                    <p>놓치면 안 되는 중요한 시점! **자동차보험갱신기간**을 정확히 알고 준비하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험다이렉트비교</h2>
-                <a class="link-description" href="https://directbpmoa.withusdone.com/" target="_blank">
-                    다이렉트 보험사 간에도 가격 차이는 존재합니다. 가장 저렴하고 든든한 보험사를 가려내는 핵심 비교.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotiono.withusdone.com/" target="_blank">
+                    <span class="keyword">싼타페보험료</span>
+                    <p>국민 SUV 싼타페, **싼타페보험료**의 현실적인 견적과 할인 팁!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자차보험가입</h2>
-                <a class="link-description" href="http://directcarpromota.cafe24.com/" target="_blank">
-                    선택이 아닌 필수, 자차보험. 사고 시 자기 차량 손해를 완벽하게 보상받는 현명한 가입 절차.
+            <div class="link-card direct-links">
+                <a href="https://directapmoq.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료비교</span>
+                    <p>가장 현명한 소비는 비교에서 시작됩니다. **자동차보험료비교**로 비용을 절감하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>경차자동차보험</h2>
-                <a class="link-description" href="https://directhpmop.withusdone.com/" target="_blank">
-                    경차 혜택을 극대화하는 보험료 절감 전략. 낮은 배기량과 차량가액을 활용한 보험료 계산.
+            <div class="link-card direct-links">
+                <a href="https://directepmoi.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차2대보험</span>
+                    <p>차량이 두 대 이상이라면? **자동차2대보험**으로 할인 혜택을 극대화하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>팰리세이드보험료</h2>
-                <a class="link-description" href="https://caropromotiont.withusdone.com/" target="_blank">
-                    대형 SUV의 웅장한 존재감, 팰리세이드. 가족의 안전을 최우선으로 하는 든든한 보장 설계.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotiono.withusdone.com/" target="_blank">
+                    <span class="keyword">테슬라보험료</span>
+                    <p>전기차의 미래, **테슬라보험료**의 특별한 기준과 비용을 상세 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험나이</h2>
-                <a class="link-description" href="https://directbpmoj.withusdone.com/" target="_blank">
-                    나이별로 급변하는 보험료의 비밀. 연령 한정 특약을 통해 폭탄 보험료를 피하는 치트키.
+            <div class="link-card direct-links">
+                <a href="https://directbpmoq.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험가입</span>
+                    <p>첫 가입부터 갱신까지, 쉽고 완벽한 **자동차보험가입** 절차 안내!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차책임보험가입</h2>
-                <a class="link-description" href="http://bohumpromotionn.cafe24.com/" target="_blank">
-                    과태료를 피하고 운행을 시작하는 최소한의 조건. 가장 빠르고 정확하게 책임보험에 가입하는 방법.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotionu.withusdone.com/" target="_blank">
+                    <span class="keyword">아이오닉5보험료</span>
+                    <p>미래 지향적인 아이오닉5, **아이오닉5보험료**의 새로운 기준을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험견적</h2>
-                <a class="link-description" href="https://directbpmof.withusdone.com/" target="_blank">
-                    내 차량 정보를 입력하면 바로 나오는 맞춤 견적. 시간 낭비 없이 핵심 정보만 얻는 빠른 길.
+            <div class="link-card direct-links">
+                <a href="https://directhpmom.withusdone.com/" target="_blank">
+                    <span class="keyword">자기차량손해보험</span>
+                    <p>내 차량의 손해를 보장받는 핵심 담보, **자기차량손해보험**의 중요성!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가입방법</h2>
-                <a class="link-description" href="https://directupromotionw.withusdone.com/" target="_blank">
-                    복잡했던 보험 가입 과정을 한 줄로 정리. 온라인, 전화, 설계사, 나에게 맞는 최적의 가입 채널 찾기.
+            <div class="link-card direct-links">
+                <a href="https://directapmof.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차 다이렉트 비교 견적 사이트 추천</span>
+                    <p>수많은 사이트 중 단연 돋보이는 **자동차 다이렉트 비교 견적 사이트 추천**!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료인상</h2>
-                <a class="link-description" href="https://directcpmoc.withusdone.com/" target="_blank">
-                    갑작스러운 보험료 인상에 당황하지 마세요. 인상 요인을 분석하고 대응 전략을 세우는 핵심 정보.
+            <div class="link-card car-specific-links">
+                <a href="https://carmpromotiont.withusdone.com/" target="_blank">
+                    <span class="keyword">파나메라보험료</span>
+                    <p>럭셔리 스포츠 세단 파나메라, **파나메라보험료**의 고가치 견적 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료계산</h2>
-                <a class="link-description" href="http://bohumpromotiona.cafe24.com/" target="_blank">
-                    숨겨진 할인 요소를 모두 찾아내어 최적의 보험료를 계산하는 과학. 내게 가장 유리한 보험료 산출.
+            <div class="link-card direct-links">
+                <a href="https://directcpmol.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험료비교견적</span>
+                    <p>가장 신속하고 정확한 정보! **다이렉트자동차보험료비교견적**으로 시간을 절약하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>만21세 자동차보험</h2>
-                <a class="link-description" href="https://directcarunmec.withusdone.com/" target="_blank">
-                    만 21세 이상 특약을 통한 보험료 절감 찬스. 청년 운전자의 부담을 획기적으로 줄이는 보험 설계.
+            <div class="link-card direct-links">
+                <a href="https://directjpmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험료계산</span>
+                    <p>지금 바로 나의 보험료를 예측! **다이렉트자동차보험료계산**은 빠르고 정확해야 합니다.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료1년</h2>
-                <a class="link-description" href="https://directapmok.withusdone.com/" target="_blank">
-                    1년치 보험료를 미리 알아보고 현명하게 예산을 계획하세요. 연간 비용 예측 및 절감 방안.
+            <div class="link-card direct-links">
+                <a href="https://directepmox.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험책임보험</span>
+                    <p>법적 의무 사항! **자동차보험책임보험**의 보장 한도와 가입 중요성.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험료</h2>
-                <a class="link-description" href="http://bohumpromotioni.cafe24.com/" target="_blank">
-                    중개인 수수료가 빠진 순수한 보험료. 놀라운 가격으로 만나는 고품격 보장의 시작점.
+            <div class="link-card direct-links">
+                <a href="https://directhpmoh.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험2대</span>
+                    <p>차량 2대를 위한 통합 보험 솔루션, **자동차보험2대** 동시 가입 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험견적</h2>
-                <a class="link-description" href="https://directdpmok.withusdone.com/" target="_blank">
-                    1분 만에 끝내는 온라인 견적의 혁명. 가장 빠른 속도로 최저가 다이렉트 보험료를 확인하세요.
+            <div class="link-card direct-links">
+                <a href="https://directkpmoy.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차의무보험가입</span>
+                    <p>벌금 없이 안전하게! **자동차의무보험가입**을 위한 필수 절차 안내.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험등급</h2>
-                <a class="link-description" href="https://directcpmoh.withusdone.com/" target="_blank">
-                    운전자의 위험도를 수치화한 핵심 정보. 내 보험 등급을 확인하고 더 좋은 등급으로 올리는 전략.
+            <div class="link-card direct-links">
+                <a href="https://directdpmom.withusdone.com/" target="_blank">
+                    <span class="keyword">첫차보험료</span>
+                    <p>새로운 운전자의 설렘, **첫차보험료**의 부담을 줄이는 똑똑한 전략!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차보험</h2>
-                <a class="link-description" href="https://directupromotionm.withusdone.com/" target="_blank">
-                    새 차 못지않은 보장이 필요합니다. 중고차의 특성에 최적화된 보험 상품 추천과 가이드.
+            <div class="link-card direct-links">
+                <a href="https://directcpmov.withusdone.com/" target="_blank">
+                    <span class="keyword">자차보험자기부담금</span>
+                    <p>사고 시 내가 내야 할 금액, **자차보험자기부담금**의 구조를 명확히 이해하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험갱신기간</h2>
-                <a class="link-description" href="https://directcpmog.withusdone.com/" target="_blank">
-                    보험 갱신 시기를 놓치면 안 되는 이유. 갱신 기간을 미리 확인하고 보험 공백을 피하는 방법.
+            <div class="link-card direct-links">
+                <a href="https://directfpmok.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험운전경력</span>
+                    <p>경력 인정을 통한 보험료 절감! **자동차보험운전경력** 인정 기준을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>테슬라보험료</h2>
-                <a class="link-description" href="https://directipmoc.withusdone.com/" target="_blank">
-                    첨단 기술의 집약체, 테슬라. 일반 차량과 다른 특별한 수리비와 그에 따른 보험료 산정의 비밀.
+            <div class="link-card direct-links">
+                <a href="https://directgpmoc.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료견적비교</span>
+                    <p>한 번의 클릭으로 완성되는 최적의 보험료! **자동차보험료견적비교**의 마법.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험할증</h2>
-                <a class="link-description" href="https://directapmom.withusdone.com/" target="_blank">
-                    사고 후 피할 수 없는 보험료 상승. 할증의 원인과 할증률을 최소화하는 전략적 대응 방안.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionq.withusdone.com/" target="_blank">
+                    <span class="keyword">QM3보험료</span>
+                    <p>실용적인 소형 SUV QM3, **QM3보험료**의 경제적인 견적 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>첫차보험료</h2>
-                <a class="link-description" href="https://directupromotioni.withusdone.com/" target="_blank">
-                    운전 인생의 설레는 첫 출발. 첫차 운전자를 위한 가장 경제적이고 든든한 보험료 해법.
+            <div class="link-card car-specific-links">
+                <a href="https://carmpromotionk.withusdone.com/" target="_blank">
+                    <span class="keyword">폭스바겐 제타 보험료</span>
+                    <p>탄탄한 기본기의 제타, **폭스바겐 제타 보험료**의 합리적인 가격!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>차 보험료</h2>
-                <a class="link-description" href="http://directcarpromotk.cafe24.com/" target="_blank">
-                    내 차에 매년 지출하는 필수 비용. 차 보험료의 기본 구조를 이해하고 절약 포인트를 찾는 안내서.
+            <div class="link-card car-specific-links">
+                <a href="https://carmpromotionr.withusdone.com/" target="_blank">
+                    <span class="keyword">BMW3시리즈보험료</span>
+                    <p>펀 드라이빙의 대명사 3시리즈, **BMW3시리즈보험료**의 다이내믹한 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>푸조보험료</h2>
-                <a class="link-description" href="https://directxpromotiont.withusdone.com/" target="_blank">
-                    프랑스 감성의 독특함, 푸조. 수입차 특성을 반영하여 합리적인 보험료를 설계하는 특별한 가이드.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotionb.withusdone.com/" target="_blank">
+                    <span class="keyword">경차자동차보험</span>
+                    <p>경차는 보험료도 저렴하다? **경차자동차보험**의 숨겨진 할인 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>제네시스보험료</h2>
-                <a class="link-description" href="https://directxpromotiong.withusdone.com/" target="_blank">
-                    국내 프리미엄 브랜드의 자부심, 제네시스. 최고급 차량에 걸맞은 보장과 보험료의 조화.
+            <div class="link-card direct-links">
+                <a href="https://directbpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험나이</span>
+                    <p>나이에 따라 달라지는 보험료, **자동차보험나이** 특약의 핵심을 파악하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험조회</h2>
-                <a class="link-description" href="https://bohumpromotions.cafe24.com/" target="_blank">
-                    현재 가입된 보험의 상태, 만기일, 보장 내역을 실시간으로 확인하는 가장 빠른 방법.
+            <div class="link-card direct-links">
+                <a href="https://directepmoh.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차책임보험한도</span>
+                    <p>의무 보험의 최소 보장, **자동차책임보험한도**를 넘어선 준비가 필요합니다.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험자상</h2>
-                <a class="link-description" href="https://directdpmoc.withusdone.com/" target="_blank">
-                    가족의 안전을 위한 선택, 자동차상해(자상). 자손과 자상 중 어떤 것을 선택해야 할지 명확한 비교.
+            <div class="link-card direct-links">
+                <a href="https://directapmok.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료1년</span>
+                    <p>1년 단위로 설계하는 가장 일반적인 플랜, **자동차보험료1년** 견적을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>캠핑카보험</h2>
-                <a class="link-description" href="https://directipmot.withusdone.com/" target="_blank">
-                    특별한 목적의 차량, 캠핑카. 일반 차량과는 다른 맞춤형 보험 설계와 유의사항 확인.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionc.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험부부한정</span>
+                    <p>부부만을 위한 경제적인 선택, **자동차보험부부한정** 특약의 장점!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료 할부</h2>
-                <a class="link-description" href="https://directbpmoz.withusdone.com/" target="_blank">
-                    자차 보험 할증 기준을 미리 알아두고 불필요한 보험금 청구를 막아 미래 보험료를 절약하는 지혜.
+            <div class="link-card direct-links">
+                <a href="https://directbpmoh.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험갱신</span>
+                    <p>만료 전에 미리 준비하는 현명함, **자동차보험갱신** 시기를 놓치지 마세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험회사순위</h2>
-                <a class="link-description" href="http://directcarpromotg.cafe24.com/" target="_blank">
-                    가장 튼튼하고 신뢰할 수 있는 보험사를 찾아드립니다. 객관적인 데이터를 기반으로 한 보험사 순위 분석.
+            <div class="link-card direct-links">
+                <a href="https://directbpmor.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험료</span>
+                    <p>중개 수수료가 빠진 순수한 가격, **다이렉트자동차보험료**의 매력을 경험하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>벤츠보험료</h2>
-                <a class="link-description" href="https://caropromotionb.withusdone.com/" target="_blank">
-                    메르세데스-벤츠의 숭고한 가치. 최고급 수입차에 적합한 보장 범위와 최적의 보험료 산출.
+            <div class="link-card direct-links">
+                <a href="https://directepmom.withusdone.com/" target="_blank">
+                    <span class="keyword">내자동차보험찾기</span>
+                    <p>가입했던 보험을 잊으셨나요? **내자동차보험찾기** 서비스로 신속하게 확인!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험자기부담금</h2>
-                <a class="link-description" href="https://directbpmon.withusdone.com/" target="_blank">
-                    사고 시 내가 실제로 부담해야 하는 금액. 자기부담금의 개념을 이해하고 금액을 설정하는 전략.
+            <div class="link-card car-specific-links">
+                <a href="https://carmpromotiono.withusdone.com/" target="_blank">
+                    <span class="keyword">레이자동차보험료</span>
+                    <p>귀여운 디자인만큼 경제적! **레이자동차보험료**의 합리적인 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료계산기</h2>
-                <a class="link-description" href="https://directgpmoa.withusdone.com/" target="_blank">
-                    복잡한 계산은 인공지능에 맡기세요. 가장 정확하게 내 보험료를 예측하는 스마트 계산 도구.
+            <div class="link-card direct-links">
+                <a href="https://directcpmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험승계</span>
+                    <p>차량 또는 명의 변경 시, **자동차보험승계** 절차를 깔끔하게 처리하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>만24세자동차보험</h2>
-                <a class="link-description" href="https://directcarunmeg.withusdone.com/" target="_blank">
-                    보험료 절감의 황금기, 만 24세. 연령 특약 설정을 통해 보험료 부담을 획기적으로 낮추는 방법.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotiont.withusdone.com/" target="_blank">
+                    <span class="keyword">벤츠자동차보험</span>
+                    <p>럭셔리의 대명사 벤츠, 그 품격에 맞는 **벤츠자동차보험** 프리미엄 솔루션!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가입확인</h2>
-                <a class="link-description" href="https://directepmoy.withusdone.com/" target="_blank">
-                    혹시 보험에 가입되어 있지 않다면? 책임보험 의무 가입 여부를 신속하게 확인하는 공식 창구.
+            <div class="link-card direct-links">
+                <a href="https://directapmom.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험할증</span>
+                    <p>사고 후 오르는 보험료! **자동차보험할증** 기준과 절약 팁을 알아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>SUV보험료</h2>
-                <a class="link-description" href="https://caropromotiona.withusdone.com/" target="_blank">
-                    다재다능한 캠핑카 운전자를 위한 특별한 보험. 레저 활동 중 발생할 수 있는 사고까지 완벽 대비.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotiont.withusdone.com/" target="_blank">
+                    <span class="keyword">아우디A6보험료</span>
+                    <p>세련된 디자인의 아우디 A6, **아우디A6보험료**의 고성능 견적 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>렉서스ES300H보험료</h2>
-                <a class="link-description" href="https://carmpromotionl.withusdone.com/" target="_blank">
-                    하이브리드의 정숙함과 렉서스의 고급스러움. ES 300h를 위한 경제적이면서도 튼튼한 보험료 해법.
+            <div class="link-card direct-links">
+                <a href="https://directkpmob.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험인터넷가입</span>
+                    <p>번거로움 없이 클릭 몇 번으로! **자동차보험인터넷가입**의 편리함을 경험하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험다이렉트</h2>
-                <a class="link-description" href="https://directapmoe.withusdone.com/" target="_blank">
-                    중간 수수료를 없애고 가격을 혁신하다. 보험료 절감의 정석, 다이렉트 보험 가입의 모든 것.
+            <div class="link-card direct-links">
+                <a href="https://directgpmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험자기신체사고</span>
+                    <p>운전자와 탑승자를 보호하는 핵심 담보, **자동차보험자기신체사고**의 중요성!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험책임보험</h2>
-                <a class="link-description" href="https://directupromotionv.withusdone.com/" target="_blank">
-                    가장 기본적인 의무 보험의 핵심. 책임보험의 보장 한도와 가입이 필요한 이유에 대한 명확한 정리.
+            <div class="link-card direct-links">
+                <a href="https://directkpmos.withusdone.com/" target="_blank">
+                    <span class="keyword">전기차자동차보험</span>
+                    <p>친환경 미래차, **전기차자동차보험**의 특별한 할인 혜택과 보장 내용!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험운전경력</h2>
-                <a class="link-description" href="https://directfpmok.withusdone.com/" target="_blank">
-                    보험료 할인에 가장 큰 영향을 미치는 요소. 운전 경력을 인정받아 보험료를 낮추는 확실한 방법.
+            <div class="link-card direct-links">
+                <a href="https://directapmog.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험료계산</span>
+                    <p>가장 중요한 첫 단계! **자동차보험료계산**으로 나의 예산을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적사이트</h2>
-                <a class="link-description" href="https://directapmou.withusdone.com/" target="_blank">
-                    수많은 보험 상품 속에서 나만의 최적가를 찾아내는 지능형 비교 견적 시스템.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotiond.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험블랙박스할인</span>
+                    <p>안전을 위한 블랙박스가 보험료 할인까지? **자동차보험블랙박스할인** 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>신차보험가입</h2>
-                <a class="link-description" href="https://directcarunmei.withusdone.com/" target="_blank">
-                    새 차 출고 전 반드시 알아야 할 보험 상식. 신차의 가치를 가장 완벽하게 보호하는 가입 노하우.
+            <div class="link-card direct-links">
+                <a href="https://directhpmof.withusdone.com/" target="_blank">
+                    <span class="keyword">30대자동차보험료 평균 얼마 무료 실시간 조회</span>
+                    <p>30대 운전자라면 주목! **30대자동차보험료 평균**을 실시간으로 확인하고 비교하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험갱신</h2>
-                <a class="link-description" href="https://directbpmoh.withusdone.com/" target="_blank">
-                    기존 보험을 그대로 유지할 것인가, 새로운 보험으로 갈아탈 것인가. 현명한 갱신 결정을 위한 체크리스트.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotioni.withusdone.com/" target="_blank">
+                    <span class="keyword">스포티지보험료</span>
+                    <p>활용도 높은 스포티지, **스포티지보험료**의 경제적인 견적 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>차량보험</h2>
-                <a class="link-description" href="https://directupromotionb.withusdone.com/" target="_blank">
-                    운전 중 예상치 못한 모든 위험에 대비하는 포괄적인 안전망. 차량 보험의 기본과 활용 전략.
+            <div class="link-card direct-links">
+                <a href="https://directkpmok.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험서비스</span>
+                    <p>긴급 출동, 대차 서비스 등 다양한 **자동차보험서비스** 혜택을 누리세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>캠핑카자동차보험</h2>
-                <a class="link-description" href="https://directxpromotionu.withusdone.com/" target="_blank">
-                    여행의 자유를 만끽하는 캠핑카 오너를 위한 맞춤형 보험. 주행 중 사고뿐 아니라 정박 시 위험까지 대비.
+            <div class="link-card direct-links">
+                <a href="https://directnpmoz.withusdone.com/" target="_blank">
+                    <span class="keyword">차종별보험료</span>
+                    <p>차량 모델마다 다른 보험료! **차종별보험료**의 숨겨진 차이를 분석하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험비</h2>
-                <a class="link-description" href="https://directfpmoc.withusdone.com/" target="_blank">
-                    보험료 외에 숨겨진 비용은 없는지 투명하게 확인합니다. 자동차 보험에 들어가는 모든 비용의 상세 분석.
+            <div class="link-card direct-links">
+                <a href="https://directkpmot.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험점유율</span>
+                    <p>신뢰할 수 있는 보험사를 찾는 기준, **자동차보험점유율** 순위를 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가격</h2>
-                <a class="link-description" href="https://directepmob.withusdone.com/" target="_blank">
-                    보험 가입 전 가장 중요한 정보. 차량가액, 운전 경력 등을 종합하여 결정되는 최종 보험 가격의 이해.
+            <div class="link-card direct-links">
+                <a href="https://directgpmot.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험회사종류</span>
+                    <p>다양한 선택지! **자동차보험회사종류**별 특징과 장점을 비교해 보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료할인</h2>
-                <a class="link-description" href="https://directepmos.withusdone.com/" target="_blank">
-                    블랙박스, 마일리지, 자녀 할인. 놓치기 쉬운 모든 할인 혜택을 찾아내어 보험료를 극대화하는 비법.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoy.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험차량변경</span>
+                    <p>차량을 바꾸었다면? **자동차보험차량변경** 절차와 필수 체크리스트!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차다이렉트보험</h2>
-                <a class="link-description" href="https://directapmod.withusdone.com/" target="_blank">
-                    전화나 방문 없이 온라인으로 직접 가입. 불필요한 비용을 절감하는 가장 스마트한 보험 가입 방식.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionw.withusdone.com/" target="_blank">
+                    <span class="keyword">쏘렌토보험료</span>
+                    <p>인기 SUV 쏘렌토, **쏘렌토보험료**의 가성비 넘치는 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차보험가입</h2>
-                <a class="link-description" href="https://directxpromotiond.withusdone.com/" target="_blank">
-                    중고차 매매 시 필수 체크리스트. 인수와 동시에 보장 공백 없이 보험에 가입하는 간편 절차 안내.
+            <div class="link-card direct-links">
+                <a href="https://directhpmos.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험갈아타기</span>
+                    <p>만기 시점에 더 좋은 조건으로! **자동차보험갈아타기** 최적의 타이밍과 방법!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적사이트</h2>
-                <a class="link-description" href="https://directcarpromotx.cafe24.com/" target="_blank">
-                    단 한번의 입력으로 모든 보험사의 견적을 받아보는 시간 절약 솔루션. 현명한 소비자의 최종 선택.
+            <div class="link-card direct-links">
+                <a href="https://directkpmoul.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험가입내역조회</span>
+                    <p>과거 보험 이력이 궁금하다면? **자동차보험가입내역조회**로 모든 기록을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>차보험계산</h2>
-                <a class="link-description" href="https://directupromotionj.withusdone.com/" target="_blank">
-                    복잡한 계산식을 무시하고 바로 결과를 얻으세요. 내 차량의 최적 보험료를 즉시 계산하는 도구.
+            <div class="link-card direct-links">
+                <a href="https://directfpmor.withusdone.com/" target="_blank">
+                    <span class="keyword">차보험료계산</span>
+                    <p>나만의 **차보험료계산**을 위한 빠르고 정확한 시뮬레이션!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험자차</h2>
-                <a class="link-description" href="https://directbpmoy.withusdone.com/" target="_blank">
-                    사고로 인한 내 차의 손해를 보장받는 핵심 담보. 자차 가입의 필요성과 보장 범위를 명확히 이해.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotioni.withusdone.com/" target="_blank">
+                    <span class="keyword">모닝보험료</span>
+                    <p>귀여운 경차 모닝, **모닝보험료**의 경제적인 매력을 느껴보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험비교견적</h2>
-                <a class="link-description" href="http://m.directcarpromotq.cafe24.com/" target="_blank">
-                    모바일 환경에 최적화된 빠른 견적 비교. 언제 어디서든 손쉽게 최저가 보험료를 찾아내는 방법.
+            <div class="link-card direct-links">
+                <a href="https://directjpmoi.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험신규</span>
+                    <p>운전이 처음이라면? **자동차보험신규** 가입자를 위한 특별 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가입경력</h2>
-                <a class="link-description" href="https://directdpmog.withusdone.com/" target="_blank">
-                    보험료 할인율을 결정하는 핵심 요소. 인정받을 수 있는 운전/가족 보험 가입 경력을 확인하세요.
+            <div class="link-card direct-links">
+                <a href="https://directbpmoe.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험미가입과태료</span>
+                    <p>의무 보험 미가입의 대가, **자동차보험미가입과태료**를 피하는 방법!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험할증기준</h2>
-                <a class="link-description" href="http://bohumpromotionb.cafe24.com/" target="_blank">
-                    단 한 번의 사고가 보험료에 미치는 영향. 보험료 할증이 시작되는 구체적인 기준과 사고 점수표.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotiond.withusdone.com/" target="_blank">
+                    <span class="keyword">만19세 자동차보험</span>
+                    <p>가장 비쌀 때! **만19세 자동차보험**료 절약을 위한 숨겨진 팁!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험사</h2>
-                <a class="link-description" href="https://directcpmow.withusdone.com/" target="_blank">
-                    수많은 보험사 중 어디를 선택해야 할까요? 보상 능력과 신뢰도를 기준으로 최적의 보험사를 탐색.
+            <div class="link-card car-specific-links">
+                <a href="https://cargpromotionb.withusdone.com/" target="_blank">
+                    <span class="keyword">캐스퍼자동차보험</span>
+                    <p>개성 넘치는 경형 SUV 캐스퍼, **캐스퍼자동차보험**의 맞춤 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험추천</h2>
-                <a class="link-description" href="https://directupromotionr.withusdone.com/" target="_blank">
-                    고객들의 실제 후기와 평가를 바탕으로 엄선된 최고의 다이렉트 자동차 보험 상품 추천 리스트.
+            <div class="link-card direct-links">
+                <a href="https://directapmot.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험비교견적</span>
+                    <p>중개자 없이 바로 비교! **다이렉트자동차보험비교견적**으로 투명한 가격을 만나세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료할증</h2>
-                <a class="link-description" href="https://directapmoy.withusdone.com/" target="_blank">
-                    사고로 인한 보험료 폭탄을 피하는 마지막 기회. 할증률을 낮추고 보험료 부담을 줄이는 노하우.
+            <div class="link-card car-specific-links">
+                <a href="https://directcarunmeb.withusdone.com/" target="_blank">
+                    <span class="keyword">운전병보험할인</span>
+                    <p>군 복무 중 쌓은 운전 경력, **운전병보험할인** 혜택을 놓치지 마세요!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>경차보험료</h2>
-                <a class="link-description" href="https://directbpmov.withusdone.com/" target="_blank">
-                    취등록세 감면 혜택에 더해 보험료까지 절약. 경차만이 누릴 수 있는 압도적인 보험료 절감 비법.
+            <div class="link-card direct-links">
+                <a href="https://directdpmox.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험할증조회</span>
+                    <p>나의 할증 등급은 몇 등급일까요? **자동차보험할증조회**로 투명하게 확인!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험블랙박스할인</h2>
-                <a class="link-description" href="https://directupromotionk.withusdone.com/" target="_blank">
-                    안전을 위한 투자가 곧 보험료 할인으로. 블랙박스 장착만으로 누릴 수 있는 특별한 할인 혜택.
+            <div class="link-card car-specific-links">
+                <a href="https://caropromotiona.withusdone.com/" target="_blank">
+                    <span class="keyword">캠핑카보험료</span>
+                    <p>자유로운 캠핑카 라이프, **캠핑카보험료**의 특별한 보장 설계!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차종합보험</h2>
-                <a class="link-description" href="https://directapmov.withusdone.com/" target="_blank">
-                    책임보험을 넘어선 완전한 보장. 운전 중 발생 가능한 모든 위험을 포괄하는 종합 보험의 힘.
+            <div class="link-card direct-links">
+                <a href="https://directbpmoa.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험다이렉트비교</span>
+                    <p>수많은 다이렉트 보험사, 가장 저렴하고 든든한 곳을 **자동차보험다이렉트비교**로 찾으세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>아반떼 보험료</h2>
-                <a class="link-description" href="https://directupromotionz.withusdone.com/" target="_blank">
-                    국민차 아반떼. 낮은 보험 등급으로 인한 경제적 이점과 합리적인 보험료를 직접 확인하세요.
+            <div class="link-card direct-links">
+                <a href="https://directapmoh.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험비교</span>
+                    <p>복잡한 보험, 간편하게 해결! **다이렉트자동차보험비교**로 최적의 상품을 찾아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>차보험</h2>
-                <a class="link-description" href="https://directbpmog.withusdone.com/" target="_blank">
-                    운전자라면 누구나 필수. 차 보험의 가장 기본적인 개념부터 최신 트렌드까지 한 번에 정리.
+            <div class="link-card direct-links">
+                <a href="https://directkpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">차량보험료계산</span>
+                    <p>내 차의 가치와 운전 습관을 반영한 **차량보험료계산**, 지금 바로 시작!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>내자동차보험조회</h2>
-                <a class="link-description" href="https://directapmow.withusdone.com/" target="_blank">
-                    현재 내가 가입하고 있는 자동차 보험의 모든 정보를 단숨에 확인하는 빠르고 안전한 경로.
+            <div class="link-card direct-links">
+                <a href="https://directdpmog.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험가입경력</span>
+                    <p>운전 경력이 곧 돈! **자동차보험가입경력** 인정받고 보험료 할인 받으세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험가격비교</h2>
-                <a class="link-description" href="https://directgpmoi.withusdone.com/" target="_blank">
-                    가격을 비교하는 것이 곧 보험료를 절약하는 것. 모든 보험사의 견적을 정밀하게 분석하여 제시.
+            <div class="link-card direct-links">
+                <a href="https://directjpmoq.withusdone.com/" target="_blank">
+                    <span class="keyword">다이렉트자동차보험순위</span>
+                    <p>많은 사람이 선택한 이유! **다이렉트자동차보험순위**를 확인하고 현명하게 가입하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>X3보험료</h2>
-                <a class="link-description" href="https://carmpromotionm.withusdone.com/" target="_blank">
-                    BMW의 컴팩트 SUV, X3. 프리미엄 브랜드의 성능과 실용성을 동시에 만족시키는 보험료 설계.
+            <div class="link-card direct-links">
+                <a href="https://directhpmok.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험납부</span>
+                    <p>쉽고 간편한 **자동차보험납부** 방법, 다양한 결제 옵션을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자차보험료</h2>
-                <a class="link-description" href="https://directupromotiono.withusdone.com/" target="_blank">
-                    내 차를 지키는 가장 강력한 보장. 차량가액에 따른 자차 보험료 산정 기준과 절감 팁.
+            <div class="link-card direct-links">
+                <a href="https://directfpmou.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험대인배상2</span>
+                    <p>책임 보험 한도를 넘어선 보장, **자동차보험대인배상2**의 무제한 안전망!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>토레스보험료</h2>
-                <a class="link-description" href="https://carmpromotionq.withusdone.com/" target="_blank">
-                    강인한 디자인의 정통 SUV, 토레스. 모험적인 주행에 대비하는 튼튼한 보험 설계와 보험료 정보.
+            <div class="link-card direct-links">
+                <a href="https://directhpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">경차자동차보험</span>
+                    <p>작지만 알찬 혜택! **경차자동차보험**으로 더 경제적인 운전 생활!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>만30세자동차보험</h2>
-                <a class="link-description" href="https://directcarunmc.withusdone.com/" target="_blank">
-                    안정적인 운전 경력으로 보험료가 획기적으로 낮아지는 30대. 황금 연령대의 보험료 절감 기회.
+            <div class="link-card direct-links">
+                <a href="https://directcpmou.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차책임보험가격</span>
+                    <p>의무 보험의 최소 비용, **자동차책임보험가격**을 가장 저렴하게 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적</h2>
-                <a class="link-description" href="http://bohumpromotiond.cafe24.com/" target="_blank">
-                    수십 개 견적을 단 몇 초 만에 확인. 시간과 노력을 절약하는 가장 효율적인 보험료 비교 서비스.
+            <div class="link-card direct-links">
+                <a href="https://directjpmoa.withusdone.com/" target="_blank">
+                    <span class="keyword">화물보험</span>
+                    <p>화물 운송 사업자를 위한 필수 보험, **화물보험**의 특별한 보장 내용!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차종합보험가격</h2>
-                <a class="link-description" href="http://directcarpromotb.cafe24.com/" target="_blank">
-                    모든 보장을 아우르는 종합 보험의 최종 가격. 보장 범위 대비 합리적인 가격을 찾아내는 기준.
+            <div class="link-card car-specific-links">
+                <a href="https://directcarunmes.withusdone.com/" target="_blank">
+                    <span class="keyword">21살자동차보험</span>
+                    <p>20대 초반의 필수 관문, **21살자동차보험**료를 절약하는 스마트한 방법!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>전기차보험료</h2>
-                <a class="link-description" href="http://bohumpromotiono.cafe24.com/" target="_blank">
-                    일반차와는 다른 전기차의 배터리 보장 특성. 친환경차의 특성에 최적화된 보험료 산정 가이드.
+            <div class="link-card direct-links">
+                <a href="https://directcpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험만기일</span>
+                    <p>보험이 끊기지 않도록! **자동차보험만기일**을 미리 확인하고 갱신하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료계산</h2>
-                <a class="link-description" href="https://directapmog.withusdone.com/" target="_blank">
-                    보험료를 낮추는 모든 변수를 고려하여 최적의 숫자를 도출. 과학적인 보험료 계산의 핵심.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotione.withusdone.com/" target="_blank">
+                    <span class="keyword">그랜저보험료</span>
+                    <p>준대형 세단의 표준 그랜저, **그랜저보험료**의 현실적인 견적 분석!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험기간</h2>
-                <a class="link-description" href="https://directgpmoh.withusdone.com/" target="_blank">
-                    보험 효력이 발생하는 시작점과 끝나는 시점. 가입 기간을 정확히 알고 보험 공백을 예방하는 지식.
+            <div class="link-card direct-links">
+                <a href="https://directgpmoq.withusdone.com/" target="_blank">
+                    <span class="keyword">차보험나이</span>
+                    <p>운전자 **차보험나이** 제한 특약을 현명하게 설정하여 보험료를 아끼세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험책임보험</h2>
-                <a class="link-description" href="https://directepmox.withusdone.com/" target="_blank">
-                    법이 정한 최소한의 의무 보장. 책임보험의 한도와 미가입 시 발생하는 법적 불이익 안내.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoh.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험견적비교사이트</span>
+                    <p>다양한 보험사를 한눈에! **자동차보험견적비교사이트**에서 최적의 상품을 찾으세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험비교</h2>
-                <a class="link-description" href="https://directapmoh.withusdone.com/" target="_blank">
-                    중개인을 거치지 않아 저렴한 다이렉트 채널의 상품을 한곳에서 모아 비교하는 경제적인 선택.
+            <div class="link-card direct-links">
+                <a href="https://directapmoi.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험할증기준</span>
+                    <p>사고 시 보험료가 오르는 기준! **자동차보험할증기준**을 명확하게 이해하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험 만기</h2>
-                <a class="link-description" href="https://directcpmoi.withusdone.com/" target="_blank">
-                    보험 계약이 끝나는 날. 만기일을 기준으로 새로운 보험을 준비하는 전략적 보험 관리법.
+            <div class="link-card car-specific-links">
+                <a href="https://carnpromotionp.withusdone.com/" target="_blank">
+                    <span class="keyword">투싼보험료</span>
+                    <p>인기 SUV 투싼, **투싼보험료**의 경제적인 견적을 지금 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>G80보험료</h2>
-                <a class="link-description" href="https://directxpromotions.withusdone.com/" target="_blank">
-                    제네시스의 명작, G80. 럭셔리 세단의 가치를 지켜주는 흠잡을 데 없는 보험 보장 설계.
+            <div class="link-card direct-links">
+                <a href="https://directhpmob.withusdone.com/" target="_blank">
+                    <span class="keyword">공동명의자동차보험</span>
+                    <p>공동명의 차량의 보험 가입, **공동명의자동차보험**의 장점과 유의사항!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험 승계</h2>
-                <a class="link-description" href="https://directcpmoe.withusdone.com/" target="_blank">
-                    차량 소유주가 바뀌거나 가족 간 명의 변경 시 보험 경력을 이어받는 가장 현명한 승계 절차 안내.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotionf.withusdone.com/" target="_blank">
+                    <span class="keyword">셀토스보험료</span>
+                    <p>젊은 감각의 SUV 셀토스, **셀토스보험료**의 합리적인 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험순위</h2>
-                <a class="link-description" href="https://bohumpromotionp.cafe24.com/" target="_blank">
-                    소비자들이 인정한 최고의 서비스와 가격 경쟁력. 현명한 선택을 위한 보험사 순위 정보 공개.
+            <div class="link-card direct-links">
+                <a href="https://directipmoq.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험견적비교</span>
+                    <p>시간 낭비 없이 한 번에! **자동차보험견적비교**로 최고의 가치를 얻으세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료인상</h2>
-                <a class="link-description" href="https://directdpmol.withusdone.com/" target="_blank">
-                    내 보험료가 오르는 이유를 명확하게 분석. 할증 요인을 파악하고 보험료 상승을 최소화하는 전략.
+            <div class="link-card direct-links">
+                <a href="https://directgpmoz.withusdone.com/" target="_blank">
+                    <span class="keyword">벤츠보험료</span>
+                    <p>프리미엄 벤츠 차량을 위한 **벤츠보험료**, 그 가치에 맞는 보장 설계!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>실시간자동차보험견적</h2>
-                <a class="link-description" href="https://directupromotionx.withusdone.com/" target="_blank">
-                    기다릴 필요 없이 바로 확인하세요. 최신 데이터를 반영한 가장 정확한 실시간 보험료 견적 서비스.
+            <div class="link-card direct-links">
+                <a href="https://directlpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차책임보험료</span>
+                    <p>의무 가입 보험의 최소 비용! **자동차책임보험료**를 최저가로 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적</h2>
-                <a class="link-description" href="https://directapmoo.withusdone.com/" target="_blank">
-                    가장 복잡하고 중요한 보험료 비교. 모든 상품의 장단점을 명확하게 제시하여 선택을 돕는 분석.
+            <div class="link-card direct-links">
+                <a href="https://directkpmol.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험가입방법</span>
+                    <p>헤매지 않고 쉽게! **자동차보험가입방법**의 모든 단계를 상세 안내합니다.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험조회</h2>
-                <a class="link-description" href="https://directcarpromotu.cafe24.com/" target="_blank">
-                    내가 어떤 보험에 가입되어 있는지 헷갈릴 때. 빠르고 안전하게 가입 정보를 찾아내는 조회 서비스.
+            <div class="link-card direct-links">
+                <a href="https://directhpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험사확인</span>
+                    <p>내가 가입한 보험사가 어디인지 궁금하다면? **자동차보험사확인**!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>인터넷자동차보험</h2>
-                <a class="link-description" href="http://directcarpromoto.cafe24.com/" target="_blank">
-                    오프라인보다 저렴한 인터넷 전용 상품. 시공간 제약 없이 편리하게 가입하는 디지털 보험의 세계.
+            <div class="link-card direct-links">
+                <a href="https://directcpmom.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험 신규</span>
+                    <p>새로운 운전자를 위한 특별 플랜, **자동차보험 신규** 가입 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험 종류</h2>
-                <a class="link-description" href="https://bohumpromotiont.cafe24.com/" target="_blank">
-                    자동차 보험을 구성하는 필수 담보와 선택 담보의 상세 설명. 나에게 필요한 보장만 쏙쏙 고르는 지침서.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotionl.withusdone.com/" target="_blank">
+                    <span class="keyword">테슬라보험</span>
+                    <p>첨단 기술의 집약체 테슬라, **테슬라보험**의 혁신적인 보장 내용!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교</h2>
-                <a class="link-description" href="https://directcarunmeu.withusdone.com/" target="_blank">
-                    나이별, 성별, 차종별 모든 조건에 따른 보험료 차이를 분석하여 최적의 가입 시점을 찾아냅니다.
+            <div class="link-card direct-links">
+                <a href="https://directgpmoj.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험자기차량손해</span>
+                    <p>내 차의 파손까지 완벽하게! **자동차보험자기차량손해** 보장의 핵심!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비</h2>
-                <a class="link-description" href="https://directupromotions.withusdone.com/" target="_blank">
-                    운전자가 지불하는 모든 보험료의 상세 내역을 투명하게 공개. 숨겨진 비용 없이 순수한 보험료만 확인.
+            <div class="link-card direct-links">
+                <a href="https://directdpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">차량보험가입조회</span>
+                    <p>가입 여부부터 보장 내용까지, **차량보험가입조회**로 모든 것을 확인하세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>쏘렌토하이브리드보험료</h2>
-                <a class="link-description" href="https://carvpromotione.withusdone.com/" target="_blank">
-                    연비와 힘을 모두 가진 쏘렌토 하이브리드. 친환경차 혜택을 반영하여 보험료를 절감하는 특급 정보.
+            <div class="link-card direct-links">
+                <a href="https://directfpmos.withusdone.com/" target="_blank">
+                    <span class="keyword">자차할증</span>
+                    <p>자차 사고 시 보험료 변화! **자차할증** 기준과 대비책을 알아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>만26세 자동차보험</h2>
-                <a class="link-description" href="https://directcarunmea.withusdone.com/" target="_blank">
-                    만 26세 이상 운전자만이 누릴 수 있는 특별한 할인 혜택. 연령 한정 특약의 최적화 전략.
+            <div class="link-card direct-links">
+                <a href="https://directgpmou.withusdone.com/" target="_blank">
+                    <span class="keyword">자차보험료</span>
+                    <p>내 차를 위한 보장 비용, **자차보험료**를 투명하게 계산해 보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험다이렉트</h2>
-                <a class="link-description" href="https://directcarpromotw.cafe24.com/" target="_blank">
-                    가장 저렴하고 편리한 가입 채널, 다이렉트. 보험사별 다이렉트 상품의 가격과 보장을 비교 분석.
+            <div class="link-card car-specific-links">
+                <a href="https://directxpromotionq.withusdone.com/" target="_blank">
+                    <span class="keyword">트위지보험료</span>
+                    <p>초소형 전기차 트위지, **트위지보험료**의 경제적인 특성을 분석합니다.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>테슬라모델3보험료</h2>
-                <a class="link-description" href="https://caropromotionr.withusdone.com/" target="_blank">
-                    전기차의 미래를 이끌어가는 모델 3. 첨단 기술 차량에 걸맞은 높은 보장과 합리적인 보험료 찾기.
+            <div class="link-card direct-links">
+                <a href="https://directepmoc.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차자차보험</span>
+                    <p>필수는 아니지만 꼭 필요한 보장! **자동차자차보험**의 모든 것.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>중고차보험료</h2>
-                <a class="link-description" href="https://directgpmop.withusdone.com/" target="_blank">
-                    중고차의 연식과 주행거리를 고려한 현실적인 보험료. 감가상각을 반영한 현명한 보험료 설계.
+            <div class="link-card direct-links">
+                <a href="https://directjpmot.withusdone.com/" target="_blank">
+                    <span class="keyword">차보험비교</span>
+                    <p>다양한 상품을 한눈에! **차보험비교**로 나에게 맞는 최적의 보험을 찾으세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>신규 자동차보험</h2>
-                <a class="link-description" href="https://bohumpromotionl.cafe24.com/" target="_blank">
-                    운전을 처음 시작하는 당신을 위한 완벽한 보험 가입 안내서. 보험료 부담을 최소화하는 초기 전략.
+            <div class="link-card direct-links">
+                <a href="https://directdpmoz.withusdone.com/" target="_blank">
+                    <span class="keyword">자차보험뜻</span>
+                    <p>자차 보험, 정확히 무엇을 의미할까요? **자차보험뜻** 명쾌한 해설!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>차량보험가입조회</h2>
-                <a class="link-description" href="https://directdpmop.withusdone.com/" target="_blank">
-                    내 차가 보험에 가입되어 있는지 궁금할 때. 차량 번호만으로 가입 정보를 신속하게 확인하는 서비스.
+            <div class="link-card direct-links">
+                <a href="https://directapmom.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험할증</span>
+                    <p>사고 후 오르는 보험료! **자동차보험할증** 기준과 절약 팁을 알아보세요.</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>BMW3시리즈보험료</h2>
-                <a class="link-description" href="https://carmpromotionr.withusdone.com/" target="_blank">
-                    운전의 즐거움을 선사하는 3시리즈. 스포티한 주행 성능에 대비하는 든든한 보험료 설계 가이드.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotionj.withusdone.com/" target="_blank">
+                    <span class="keyword">벨로스터 N 보험료</span>
+                    <p>고성능 해치백 벨로스터 N, **벨로스터 N 보험료**의 스포티한 견적!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>제네시스G70보험료</h2>
-                <a class="link-description" href="https://caropromotionu.withusdone.com/" target="_blank">
-                    다이내믹 럭셔리 세단의 완성, G70. 고성능 차량에 필요한 특화 보장과 보험료의 균형점 찾기.
+            <div class="link-card direct-links">
+                <a href="https://directbpmop.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차의무보험</span>
+                    <p>모든 운전자가 반드시 가입해야 하는 **자동차의무보험**의 핵심 정보!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험다이렉트비교견적</h2>
-                <a class="link-description" href="https://directapmot.withusdone.com/" target="_blank">
-                    온라인 전용 상품의 최저가 경쟁. 여러 다이렉트 보험사의 견적을 실시간으로 비교하고 선택.
+            <div class="link-card direct-links">
+                <a href="https://directfpmoc.withusdone.com/" target="_blank">
+                    <span class="keyword">자동차보험1인추가</span>
+                    <p>특약 운전자 범위 확대! **자동차보험1인추가** 시 보험료 변화는?</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적사이트</h2>
-                <a class="link-description" href="https://bohumpromotionm.cafe24.com/" target="_blank">
-                    단 하나의 견적도 놓치지 않는 정교함. 국내 모든 보험사의 상품을 비교하는 최적화된 플랫폼.
+            <div class="link-card car-specific-links">
+                <a href="https://carvpromotionb.withusdone.com/" target="_blank">
+                    <span class="keyword">하이브리드보험료</span>
+                    <p>연비와 효율의 하이브리드, **하이브리드보험료**의 숨겨진 할인 혜택!</p>
                 </a>
             </div>
-            
-            <div class="link-card">
-                <h2>자동차보험할인등급</h2>
-                <a class="link-description" href="https://directepmor.withusdone.com/" target="_blank">
-                    무사고 운전자가 받는 보상. 할인 등급을 높여 매년 보험료를 절약하는 장기적인 전략 제시.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>GV70보험료</h2>
-                <a class="link-description" href="https://carvpromotiond.withusdone.com/" target="_blank">
-                    도심 속 우아한 질주, GV70. 세련된 디자인만큼이나 특별한 프리미엄 SUV의 합리적인 보험 견적.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>자동차책임보험가격</h2>
-                <a class="link-description" href="https://directcpmou.withusdone.com/" target="_blank">
-                    의무 보험의 최저 가격을 비교 분석. 법적 요구 사항을 가장 경제적으로 충족하는 방법.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>다이렉트자동차보험비교견적</h2>
-                <a class="link-description" href="https://directcarunmev.withusdone.com/" target="_blank">
-                    22살 운전자를 위한 가장 현실적인 보험료 계산. 청년층의 보험료 부담을 낮추는 특약 정보.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>차보험료조회</h2>
-                <a class="link-description" href="https://directjpmou.withusdone.com/" target="_blank">
-                    내 차의 현재 가치를 반영한 정확한 보험료. 불필요한 비용 없이 핵심 보험료만 빠르게 조회.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>자동차보험명의변경</h2>
-                <a class="link-description" href="https://directepmow.withusdone.com/" target="_blank">
-                    차량 명의 변경 시 반드시 처리해야 할 보험 절차. 경력 단절 없이 보험을 안전하게 승계하는 방법.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>X6보험료</h2>
-                <a class="link-description" href="https://caropromotionw.withusdone.com/" target="_blank">
-                    쿠페형 SUV의 독특한 존재감, X6. 고성능 차량의 수리비에 완벽하게 대비하는 프리미엄 보험 설계.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>모닝보험료</h2>
-                <a class="link-description" href="https://directxpromotioni.withusdone.com/" target="_blank">
-                    경제적인 경차의 대표주자, 모닝. 낮은 보험료로 최고의 가성비를 자랑하는 모닝 오너의 현명한 선택.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>자동차보험종합보험</h2>
-                <a class="link-description" href="https://directapmov.withusdone.com/" target="_blank">
-                    책임부터 자차까지 모든 것을 아우르는 완전한 보장. 사고의 모든 위험에서 당신을 지켜줄 궁극의 보험.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>자동차보험대물배상</h2>
-                <a class="link-description" href="https://directbpmox.withusdone.com/" target="_blank">
-                    상대방 차량 및 재산 피해를 보상하는 핵심 담보. 대물 한도를 높여 큰 사고에 대비하는 전략.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교</h2>
-                <a class="link-description" href="https://directcarunmeu.withusdone.com/" target="_blank">
-                    22살 운전자를 위한 가장 현실적인 보험료 계산. 청년층의 보험료 부담을 낮추는 특약 정보.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>X5보험료</h2>
-                <a class="link-description" href="https://carvpromotionk.withusdone.com/" target="_blank">
-                    BMW의 베스트셀링 럭셔리 SUV, X5. 차량의 높은 가치에 걸맞은 든든한 보험 설계와 비용 분석.
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <h2>자동차보험료비교견적</h2>
-                <a class="link-description" href="https://directupromotiong.withusdone.com/" target="_blank">
-                    최저가 견적을 찾는 여정의 종착역. 여러 보험사의 상품을 비교하여 최상의 조건만 선별.
-                </a>
-            </div>
-            
         </div>
-    </div>
+    </main>
+</div>
 
 </body>
 </html>
